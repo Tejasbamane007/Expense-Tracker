@@ -1,0 +1,236 @@
+/* ==== Base Reset ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  font-family: 'Inter', "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+button, input, select {
+  font-family: inherit;
+  font-size: 1rem;
+}
+button {
+  cursor: pointer;
+}
+
+/* ==== Utility ==== */
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.card {
+  padding: 2rem;
+  border-radius: 16px;
+  margin: 1.5rem 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ==== Header ==== */
+.site-header {
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00adb5 0%, #007b7f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.header-actions button,
+.header-actions a {
+  margin: 0;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+}
+
+/* ==== Summary ==== */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+.summary-item {
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+.summary-item h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.summary-item p {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+}
+
+/* ==== Forms ==== */
+.form-card h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.form-card label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.form-card .row {
+  margin-bottom: 1.25rem;
+}
+.form-card input,
+.form-card select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.form-error {
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border-left: 4px solid;
+}
+
+/* ==== Transactions ==== */
+.transaction-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+.transaction-list li.income {
+  border-left: 5px solid #00adb5;
+}
+.transaction-list li.expense {
+  border-left: 5px solid #e67e22;
+}
+
+/* ==== Reports ==== */
+.chart {
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  padding: 0.5rem;       /* reduced from 2rem */
+  width: 25%;            /* makes the chart 1/4 width */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ==== THEME: DARK ==== */
+.dark-mode {
+  background: #1c1c1c;
+  color: #ecf0f1;
+}
+.dark-mode .card {
+  background: #2c2c2c;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.dark-mode .site-header {
+  background: #222;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.dark-mode .btn {
+  background: #333;
+  color: #ecf0f1;
+}
+.dark-mode .btn.primary {
+  background: #00adb5;
+  color: #fff;
+}
+.dark-mode .btn.secondary {
+  background: #e74c3c;
+  color: #fff;
+}
+.dark-mode input,
+.dark-mode select {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: #2c2c2c;
+  color: #ecf0f1;
+}
+
+/* ==== THEME: LIGHT ==== */
+.light-mode {
+  background: #f9f9f9;
+  color: #2c3e50;
+}
+.light-mode .card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.light-mode .site-header {
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.light-mode .btn {
+  background: #bdc3c7;
+  color: #2c3e50;
+}
+.light-mode .btn.primary {
+  background: #00adb5;
+  color: #fff;
+}
+.light-mode .btn.secondary {
+  background: #e67e22;
+  color: #fff;
+}
+.light-mode input,
+.light-mode select {
+  background: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
